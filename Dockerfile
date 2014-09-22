@@ -3,7 +3,7 @@ FROM ubuntu:14.04
 
 # Update and install dependencies
 RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install php5 php5-mcrypt php5-gd php5-json php5-mysql php5-memcache apache2 libapache2-mod-php5 curl php5-curl git-core
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install php5 php5-cli php5-mcrypt php5-gd php5-json php5-mysql php5-memcached apache2 libapache2-mod-php5 curl php5-curl git-core
 RUN rm /etc/apache2/sites-*/*
 RUN php5enmod mcrypt
 RUN a2enmod rewrite
